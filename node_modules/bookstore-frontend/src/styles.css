@@ -1,0 +1,1317 @@
+:root {
+  --bg: #f6efdf;
+  --bg-soft: #fcf8f0;
+  --panel: rgba(255, 251, 245, 0.88);
+  --panel-strong: #fff8ef;
+  --text: #2f2318;
+  --muted: #6f5b49;
+  --line: rgba(112, 83, 55, 0.18);
+  --brand: #9a5318;
+  --brand-strong: #6a3610;
+  --brand-soft: #e1b57f;
+  --leaf: #5f7f36;
+  --rose: #a75f32;
+  --gold: #c49553;
+  --ink: #35435f;
+  --shadow: 0 18px 45px rgba(71, 46, 24, 0.12);
+  --radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(225, 181, 127, 0.22), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(95, 127, 54, 0.15), transparent 30%),
+    linear-gradient(180deg, #fbf5e8 0%, #f6efdf 100%);
+  font-family: 'Avenir Next', 'Segoe UI', 'Trebuchet MS', sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(151, 79, 18, 0.95);
+  color: #fff5e9;
+  box-shadow: 0 8px 24px rgba(91, 45, 12, 0.22);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.brandMark {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #f2d6aa, #e8b15e);
+  color: #5f2e0e;
+  font-weight: 900;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand small {
+  opacity: 0.82;
+  font-size: 0.8rem;
+}
+
+.topnav {
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.topnav a {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  color: rgba(255, 247, 237, 0.88);
+}
+
+.topnav a.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.topActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.pageFrame {
+  width: min(1280px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.systemBanner {
+  width: min(1280px, calc(100% - 2rem));
+  margin: 1rem auto 0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(167, 95, 50, 0.92), rgba(95, 127, 54, 0.92));
+  color: #fff8ef;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.systemBanner button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 1.5rem 1.5rem 2rem;
+  border-top: 1px solid var(--line);
+  background: rgba(255, 248, 239, 0.85);
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  color: var(--muted);
+}
+
+.footer code {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--text);
+}
+
+.heroPanel,
+.detailHero,
+.authPage,
+.splitGrid,
+.statsRow,
+.filterBar,
+.bookGrid,
+.ordersStack,
+.sectionBlock,
+.catalogPage,
+.dashboardPage {
+  animation: rise 0.5s ease-out both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroPanel {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 1.5rem;
+  align-items: stretch;
+  padding: 1rem 0 2rem;
+}
+
+.heroCopy,
+.heroVisual,
+.infoCard,
+.authCard,
+.authSide .infoCard,
+.orderCard,
+.cartDrawer,
+.bookCard,
+.statTile,
+.heroCard,
+.glassPanel {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.heroCopy {
+  border-radius: 34px;
+  padding: 2rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.66), rgba(255, 244, 230, 0.9)),
+    radial-gradient(circle at top right, rgba(225, 181, 127, 0.3), transparent 30%);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  color: #fff9f0;
+  background: linear-gradient(135deg, var(--brand), #b66a24);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.heroCopy h1,
+.sectionHeading h2,
+.detailCopy h2,
+.authCard h2,
+.infoCard h3,
+.orderCard strong,
+.dashboardPage h2,
+.heroCard strong,
+.sectionBlock h2 {
+  margin: 0;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  letter-spacing: 0.01em;
+}
+
+.heroCopy h1 {
+  margin-top: 1rem;
+  font-size: clamp(2.3rem, 4vw, 4.6rem);
+  line-height: 0.95;
+  max-width: 12ch;
+  color: #6a3610;
+}
+
+.heroCopy p,
+.sectionHeading p,
+.detailCopy p,
+.infoCard p,
+.authCard p,
+.footer p,
+.orderMeta,
+.statusNote,
+.miniFeedRow,
+.tableRow,
+.cardBody p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.heroButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.solidButton,
+.ghostButton,
+.tab,
+.textButton,
+.roleChip,
+.statusTag,
+.pill,
+.coverBadge,
+.statTile,
+.checkoutForm button,
+.topnav a {
+  border-radius: 999px;
+}
+
+.solidButton,
+.ghostButton,
+.tab,
+.textButton {
+  border: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.solidButton,
+.tab.active {
+  background: linear-gradient(135deg, var(--brand), #b86c1e);
+  color: #fffaf5;
+  box-shadow: 0 10px 22px rgba(154, 83, 24, 0.25);
+}
+
+.solidButton.subtle {
+  background: linear-gradient(135deg, #8c5d21, #b87b32);
+}
+
+.solidButton.muted {
+  background: linear-gradient(135deg, var(--leaf), #7fa146);
+}
+
+.ghostButton,
+.tab,
+.textButton {
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  border: 1px solid rgba(154, 83, 24, 0.18);
+}
+
+.solidButton:hover,
+.ghostButton:hover,
+.textButton:hover,
+.tab:hover {
+  transform: translateY(-1px);
+}
+
+.wide {
+  width: 100%;
+}
+
+.heroStats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.heroStats div {
+  min-width: 110px;
+  padding: 0.85rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(154, 83, 24, 0.12);
+}
+
+.heroStats strong,
+.statTile strong {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--brand-strong);
+}
+
+.heroVisual {
+  position: relative;
+  border-radius: 34px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top, rgba(255, 221, 175, 0.7), transparent 36%),
+    linear-gradient(180deg, rgba(77, 60, 40, 0.1), rgba(255, 255, 255, 0.1));
+  min-height: 320px;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(4px);
+}
+
+.orbOne {
+  width: 220px;
+  height: 220px;
+  right: -20px;
+  top: 25px;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 220, 171, 0.95), rgba(216, 153, 77, 0.25));
+}
+
+.orbTwo {
+  width: 140px;
+  height: 140px;
+  left: 20px;
+  bottom: 30px;
+  background: radial-gradient(circle at 35% 35%, rgba(95, 127, 54, 0.65), rgba(95, 127, 54, 0.1));
+}
+
+.glassPanel {
+  position: absolute;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  border-radius: 26px;
+  padding: 1.4rem;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 250, 243, 0.72);
+}
+
+.glassPanel span {
+  color: var(--brand);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.glassPanel h2,
+.sectionHeading h2,
+.authCard h2,
+.detailCopy h2,
+.dashboardPage h2,
+.sectionBlock h2 {
+  font-size: clamp(1.8rem, 2vw, 2.8rem);
+  color: #483221;
+}
+
+.sectionBlock {
+  margin-top: 2rem;
+}
+
+.sectionHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sectionHeading.stacked {
+  display: block;
+}
+
+.sectionHeading a,
+.authSwitch .textButton,
+.sectionHeading > button {
+  color: var(--brand);
+}
+
+.heroStrip,
+.bookGrid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.heroStrip {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.heroCard {
+  border-radius: 26px;
+  padding: 0.9rem;
+  display: grid;
+  gap: 0.7rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 244, 230, 0.95));
+}
+
+.heroCardCover,
+.coverArt,
+.detailCover,
+.miniCover {
+  background: linear-gradient(145deg, var(--cover-a), var(--cover-b));
+}
+
+.heroCardCover {
+  min-height: 130px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: #fffdf8;
+  font-family: Georgia, serif;
+  text-align: center;
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.heroCardCover::after,
+.coverArt::after,
+.detailCover::after,
+.miniCover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.22), transparent 30%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+}
+
+.heroCardCover span,
+.coverFrame,
+.detailCover strong,
+.miniCover span {
+  position: relative;
+  z-index: 1;
+}
+
+.infoCard,
+.authCard,
+.authSide .infoCard,
+.orderCard,
+.bookCard,
+.cartDrawer {
+  border-radius: 24px;
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.infoCard {
+  padding: 1.4rem;
+  background: var(--panel);
+}
+
+.infoCard.alt {
+  background: linear-gradient(180deg, rgba(255, 250, 244, 0.9), rgba(241, 232, 215, 0.92));
+}
+
+.filterBar {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, minmax(0, 1fr)) auto;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.filterBar input,
+.filterBar select,
+.authForm input,
+.inventoryForm input,
+.inventoryForm textarea,
+.checkoutForm input,
+.checkoutForm select {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(112, 83, 55, 0.2);
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--text);
+}
+
+.bookGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.bookGrid.compactGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.bookCard {
+  overflow: hidden;
+  background: rgba(255, 250, 244, 0.92);
+}
+
+.coverArt,
+.detailCover {
+  position: relative;
+  min-height: 260px;
+  display: grid;
+  align-items: end;
+  padding: 1rem;
+  color: #fff8ef;
+  overflow: hidden;
+}
+
+.coverBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.4rem 0.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--brand-strong);
+  font-size: 0.78rem;
+  z-index: 1;
+}
+
+.coverFrame {
+  display: grid;
+  gap: 0.3rem;
+  z-index: 1;
+}
+
+.coverFrame strong,
+.detailCover strong {
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+}
+
+.coverFrame span,
+.detailCover span,
+.heroCard p,
+.cardMeta,
+.heroStats span,
+.checkoutSummary span,
+.orderMeta span,
+.detailFacts span {
+  font-size: 0.92rem;
+  opacity: 0.95;
+}
+
+.cardBody {
+  padding: 1rem 1rem 1.15rem;
+}
+
+.cardMeta,
+.detailFacts,
+.checkoutSummary,
+.orderMeta,
+.detailList,
+.cartRow,
+.orderFooter,
+.orderHeader,
+.cardFooter,
+.heroButtons,
+.cardActions,
+.heroStats,
+.rowActions,
+.topActions,
+.authSwitch,
+.tableRow,
+.miniFeedRow,
+.miniFeed,
+.statsRow {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.cardMeta,
+.orderMeta,
+.detailFacts {
+  justify-content: space-between;
+  color: var(--muted);
+}
+
+.cardBody h3,
+.orderCard strong,
+.infoCard h3,
+.authCard h3,
+.authSide h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.cardBody p {
+  margin: 0.4rem 0 1rem;
+  min-height: 4.2rem;
+}
+
+.cardFooter,
+.orderFooter,
+.checkoutSummary,
+.orderHeader {
+  justify-content: space-between;
+}
+
+.cardActions,
+.rowActions,
+.cardFooter,
+.miniFeedRow,
+.heroStats,
+.detailFacts,
+.orderMeta {
+  flex-wrap: wrap;
+}
+
+.textButton {
+  padding: 0;
+  background: transparent;
+  color: var(--brand);
+}
+
+.textButton.danger {
+  color: #9e3b2d;
+}
+
+.pill,
+.roleChip,
+.statusTag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.6rem;
+  background: rgba(255, 255, 255, 0.18);
+  color: inherit;
+  font-size: 0.8rem;
+}
+
+.roleChip {
+  background: rgba(255, 248, 239, 0.16);
+}
+
+.detailPage {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.detailHero {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.detailCover {
+  border-radius: 34px;
+  min-height: 520px;
+  place-items: center;
+  text-align: center;
+}
+
+.detailCover strong {
+  max-width: 10ch;
+}
+
+.detailCopy {
+  padding: 2rem;
+  border-radius: 34px;
+  background: rgba(255, 250, 244, 0.9);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.detailPrice {
+  display: block;
+  font-size: 2rem;
+  color: var(--brand-strong);
+  margin: 1rem 0;
+}
+
+.detailList {
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.authPage {
+  display: grid;
+  grid-template-columns: 1.05fr 0.8fr;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.authCard {
+  padding: 1.5rem;
+}
+
+.roleTabs {
+  display: flex;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 0.7rem 1rem;
+}
+
+.authForm,
+.inventoryForm,
+.checkoutForm {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.authSwitch {
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.authSide {
+  display: grid;
+  gap: 1rem;
+}
+
+.bookGrid .bookCard {
+  min-height: 100%;
+}
+
+.ordersStack {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.orderCard {
+  padding: 1rem;
+  background: rgba(255, 249, 241, 0.93);
+}
+
+.statusTag.processing {
+  background: rgba(208, 148, 74, 0.16);
+  color: #7c4a17;
+}
+
+.statusTag.packed {
+  background: rgba(95, 127, 54, 0.16);
+  color: #48612a;
+}
+
+.statusTag.shipped {
+  background: rgba(53, 67, 95, 0.16);
+  color: #35435f;
+}
+
+.statusTag.delivered {
+  background: rgba(77, 122, 86, 0.18);
+  color: #3d7250;
+}
+
+.cartDrawer {
+  position: fixed;
+  right: 1rem;
+  top: 6rem;
+  bottom: 1rem;
+  width: min(420px, calc(100vw - 2rem));
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+  background: rgba(255, 250, 244, 0.97);
+  z-index: 40;
+  backdrop-filter: blur(18px);
+}
+
+.cartList {
+  overflow: auto;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.cartItem {
+  display: grid;
+  grid-template-columns: 68px 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 18px;
+  background: rgba(248, 241, 230, 0.82);
+}
+
+.miniCover {
+  width: 68px;
+  height: 92px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  color: #fff9f1;
+  position: relative;
+  font-weight: 700;
+}
+
+.cartItemBody {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.cartRow {
+  justify-content: flex-start;
+}
+
+.cartRow button {
+  border: 0;
+  background: rgba(154, 83, 24, 0.14);
+  color: var(--brand-strong);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.checkoutForm {
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
+
+.checkoutSummary {
+  padding: 0.65rem 0;
+}
+
+.statusNote,
+.errorText {
+  margin: 0;
+}
+
+.errorText {
+  color: #8e3428;
+}
+
+.emptyState {
+  grid-column: 1 / -1;
+  border-radius: 24px;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 249, 240, 0.88);
+  border: 1px dashed rgba(154, 83, 24, 0.2);
+}
+
+.emptyState.compact {
+  text-align: left;
+  padding: 1rem;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 1rem;
+}
+
+.statTile {
+  padding: 1rem;
+  border-radius: 22px;
+  background: rgba(255, 250, 244, 0.9);
+}
+
+.statTile.rose {
+  background: linear-gradient(180deg, rgba(167, 95, 50, 0.88), rgba(167, 95, 50, 0.92));
+  color: #fff9f2;
+}
+
+.statTile.leaf {
+  background: linear-gradient(180deg, rgba(95, 127, 54, 0.88), rgba(95, 127, 54, 0.92));
+  color: #f8fcf1;
+}
+
+.statTile.gold {
+  background: linear-gradient(180deg, rgba(196, 149, 83, 0.88), rgba(196, 149, 83, 0.92));
+  color: #fffaf0;
+}
+
+.statTile.ink {
+  background: linear-gradient(180deg, rgba(53, 67, 95, 0.88), rgba(53, 67, 95, 0.92));
+  color: #f4f7ff;
+}
+
+.tableList,
+.miniFeed {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.tableRow,
+.miniFeedRow {
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(112, 83, 55, 0.12);
+}
+
+.miniFeedRow.stacked {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.adminInventory .tableRow.bookRow {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.6fr 0.6fr auto;
+  align-items: center;
+}
+
+.gridTwo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.compactGrid .bookCard .cardBody p {
+  min-height: 3.4rem;
+}
+
+@media (max-width: 1100px) {
+  .topbar,
+  .heroPanel,
+  .authPage,
+  .detailHero,
+  .splitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    position: static;
+  }
+
+  .topnav,
+  .topActions {
+    justify-content: flex-start;
+  }
+
+  .heroStrip,
+  .bookGrid,
+  .bookGrid.compactGrid,
+  .statsRow,
+  .filterBar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filterBar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cartDrawer {
+    right: 0.5rem;
+    left: 0.5rem;
+    top: auto;
+    bottom: 0.5rem;
+    width: auto;
+    height: min(82vh, 760px);
+  }
+}
+
+@media (max-width: 720px) {
+  .pageFrame {
+    width: min(100% - 1rem, 100%);
+    padding-top: 1rem;
+  }
+
+  .heroStrip,
+  .bookGrid,
+  .bookGrid.compactGrid,
+  .statsRow,
+  .filterBar,
+  .gridTwo,
+  .adminInventory .tableRow.bookRow {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .topbar {
+    gap: 0.8rem;
+    padding: 0.9rem;
+  }
+
+  .brand small {
+    display: none;
+  }
+}
+
+/* New UI Styles */
+
+.navTabButton {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  color: rgba(255, 247, 237, 0.88);
+  background: transparent;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navTabButton:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.coverArtImageContainer {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.bookCoverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detailCoverImageContainer {
+  border-radius: 34px;
+  height: 520px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.bookDetailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.miniCoverImageContainer {
+  width: 68px;
+  height: 92px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.miniCoverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Seller Studio & Custom Tab Styles */
+
+.sellerGraphsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.graphCard {
+  padding: 1.5rem;
+  background: var(--panel);
+}
+
+.chartWrapper {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.svgChart {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.svgChart text {
+  font-family: inherit;
+  user-select: none;
+}
+
+.svgChart rect,
+.svgChart circle {
+  transition: all 0.25s ease;
+}
+
+.svgChart rect:hover {
+  filter: brightness(1.1);
+  opacity: 0.95;
+}
+
+.svgChart circle:hover {
+  r: 7px;
+  cursor: pointer;
+}
+
+.addBookLayout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.bookPreviewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  position: sticky;
+  top: 7rem;
+}
+
+.imageUploadSection {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1.5px dashed var(--line);
+  padding: 1.2rem;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: border-color 0.2s ease;
+}
+
+.imageUploadSection:hover {
+  border-color: var(--brand);
+}
+
+.fileInputWrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+.fileInputWrapper input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.profileDetailsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1.5rem;
+}
+
+.profileField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.profileField label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+}
+
+.profileField strong {
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.avatarCircle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand), var(--rose));
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 20px rgba(154, 83, 24, 0.25);
+}
+
+.statusTag.successText {
+  background: rgba(95, 127, 54, 0.15);
+  color: #48612a;
+}
+
+.statusTag.warningText {
+  background: rgba(196, 149, 83, 0.15);
+  color: #7c5f2b;
+}
+
+.statusTag.errorText {
+  background: rgba(142, 52, 40, 0.15);
+  color: #8e3428;
+}
+
+@media (max-width: 900px) {
+  .sellerGraphsContainer,
+  .addBookLayout,
+  .profileDetailsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bookPreviewContainer {
+    position: static;
+  }
+}
+
+/* Admin Dashboard Specific Styles */
+
+.adminDashboard .adminPageHeader {
+  flex-wrap: wrap;
+}
+
+.adminDashboard .tabContent {
+  animation: rise 0.4s ease-out both;
+}
+
+.adminDashboard .tableRow {
+  transition: background 0.15s ease;
+}
+
+.adminDashboard .tableRow:hover {
+  background: rgba(255, 248, 239, 0.6);
+}
+
+.statusTag.pendingText {
+  background: rgba(196, 149, 83, 0.15);
+  color: #7c5f2b;
+}
+
+.statusTag.suspendedText {
+  background: rgba(142, 52, 40, 0.15);
+  color: #8e3428;
+}
+
+.statusTag.approvedText {
+  background: rgba(95, 127, 54, 0.15);
+  color: #48612a;
+}
+
+@media (max-width: 1100px) {
+  .adminDashboard .adminPageHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .adminDashboard .tableRow {
+    grid-template-columns: 1fr !important;
+    gap: 0.4rem !important;
+  }
+}

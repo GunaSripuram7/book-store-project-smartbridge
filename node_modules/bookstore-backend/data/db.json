@@ -1,0 +1,217 @@
+{
+  "users": [
+    {
+      "id": "admin-001",
+      "name": "Akhil Rao",
+      "email": "admin@bookverse.local",
+      "passwordHash": "$2a$10$COEww7Fwp0bo3AEfjIjP8evtdvteZWnKvsNkRfQm6/gl4.GOPEsfG",
+      "role": "admin",
+      "wishlist": []
+    },
+    {
+      "id": "seller-001",
+      "name": "Priya Sen",
+      "email": "seller1@bookverse.local",
+      "passwordHash": "$2a$10$5bkbHQNjujIvv4bMrDmZguVrLR0FGUCSW72r9VlPlthCjEDWGZZAi",
+      "role": "seller",
+      "wishlist": []
+    },
+    {
+      "id": "seller-002",
+      "name": "Kabir Das",
+      "email": "seller2@bookverse.local",
+      "passwordHash": "$2a$10$5bkbHQNjujIvv4bMrDmZguVrLR0FGUCSW72r9VlPlthCjEDWGZZAi",
+      "role": "seller",
+      "wishlist": []
+    },
+    {
+      "id": "user-001",
+      "name": "Sara Khan",
+      "email": "user@bookverse.local",
+      "passwordHash": "$2a$10$352MfyYoJWayoCcFrfJ.P.BKJgPvWfA3hHCIbf.2T4x3/IEKXNvqu",
+      "role": "user",
+      "wishlist": [
+        "book-paper-orbit",
+        "book-quiet-radials"
+      ]
+    }
+  ],
+  "books": [
+    {
+      "id": "book-aurora-ledger",
+      "title": "The Aurora Ledger",
+      "author": "Mira Sol",
+      "genre": "Speculative Fiction",
+      "price": 459,
+      "rating": 4.8,
+      "stock": 16,
+      "description": "A lantern-lit archive, a missing index, and a city that rewrites itself every winter. The Aurora Ledger blends mystery and literary fantasy in a polished, modern tone.",
+      "sellerId": "seller-001",
+      "sellerName": "Paper North",
+      "featured": true,
+      "badge": "Featured",
+      "cover": {
+        "primary": "#0d3b66",
+        "secondary": "#f4d35e",
+        "accent": "#ee964b"
+      },
+      "tags": [
+        "city",
+        "mystery",
+        "dreamlike"
+      ]
+    },
+    {
+      "id": "book-saltwater-geometry",
+      "title": "Saltwater Geometry",
+      "author": "Aarav Iyer",
+      "genre": "Contemporary Drama",
+      "price": 389,
+      "rating": 4.5,
+      "stock": 11,
+      "description": "An intimate story of migration, memory, and the invisible equations families use to survive change.",
+      "sellerId": "seller-002",
+      "sellerName": "Story Dock",
+      "featured": true,
+      "badge": "New",
+      "cover": {
+        "primary": "#144552",
+        "secondary": "#d4a373",
+        "accent": "#e76f51"
+      },
+      "tags": [
+        "family",
+        "migration",
+        "literary"
+      ]
+    },
+    {
+      "id": "book-copper-signal",
+      "title": "Copper Signal",
+      "author": "Nia Verma",
+      "genre": "Tech Thriller",
+      "price": 549,
+      "rating": 4.7,
+      "stock": 9,
+      "description": "When a product engineer discovers a hidden communications loop in a prototype city network, the clock starts running in reverse.",
+      "sellerId": "seller-001",
+      "sellerName": "Paper North",
+      "featured": false,
+      "badge": "Editor Pick",
+      "cover": {
+        "primary": "#2f3e46",
+        "secondary": "#ffb703",
+        "accent": "#fb8500"
+      },
+      "tags": [
+        "tech",
+        "fast-paced",
+        "ai"
+      ]
+    },
+    {
+      "id": "book-quiet-radials",
+      "title": "Quiet Radials",
+      "author": "Tara Menon",
+      "genre": "Self-Development",
+      "price": 329,
+      "rating": 4.4,
+      "stock": 20,
+      "description": "A calm, practical guide to building better routines, managing attention, and creating progress without noise.",
+      "sellerId": "seller-002",
+      "sellerName": "Story Dock",
+      "featured": false,
+      "badge": "Top Rated",
+      "cover": {
+        "primary": "#283618",
+        "secondary": "#dda15e",
+        "accent": "#bc6c25"
+      },
+      "tags": [
+        "productivity",
+        "habits",
+        "focus"
+      ]
+    },
+    {
+      "id": "book-velvet-compass",
+      "title": "Velvet Compass",
+      "author": "Eshan Rao",
+      "genre": "Travel Memoir",
+      "price": 419,
+      "rating": 4.6,
+      "stock": 14,
+      "description": "A warm travel memoir stitched together with field notes, recipes, and vivid snapshots from sea-facing towns.",
+      "sellerId": "seller-001",
+      "sellerName": "Paper North",
+      "featured": false,
+      "badge": "Reader Favorite",
+      "cover": {
+        "primary": "#3d405b",
+        "secondary": "#e07a5f",
+        "accent": "#f2cc8f"
+      },
+      "tags": [
+        "travel",
+        "memoir",
+        "culture"
+      ]
+    },
+    {
+      "id": "book-paper-orbit",
+      "title": "Paper Orbit",
+      "author": "Leena Shah",
+      "genre": "Campus Romance",
+      "price": 299,
+      "rating": 4.2,
+      "stock": 23,
+      "description": "Two students build a zine club, a design rivalry turns soft, and every page changes the shape of the semester.",
+      "sellerId": "seller-002",
+      "sellerName": "Story Dock",
+      "featured": true,
+      "badge": "Trending",
+      "cover": {
+        "primary": "#6f1d1b",
+        "secondary": "#f4a261",
+        "accent": "#e9c46a"
+      },
+      "tags": [
+        "romance",
+        "college",
+        "creative"
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "order-001",
+      "buyerId": "user-001",
+      "buyerName": "Sara Khan",
+      "buyerEmail": "user@bookverse.local",
+      "status": "processing",
+      "orderedAt": "2026-07-11T15:36:27.622Z",
+      "expectedDelivery": "2026-07-17T15:36:27.623Z",
+      "shipping": {
+        "name": "Sara Khan",
+        "address": "42, Lake View Residency",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "pincode": "411001"
+      },
+      "items": [
+        {
+          "bookId": "book-saltwater-geometry",
+          "title": "Saltwater Geometry",
+          "author": "Aarav Iyer",
+          "price": 389,
+          "quantity": 1,
+          "sellerId": "seller-002",
+          "sellerName": "Story Dock"
+        }
+      ],
+      "subtotal": 389,
+      "shippingFee": 49,
+      "total": 438
+    }
+  ]
+}
