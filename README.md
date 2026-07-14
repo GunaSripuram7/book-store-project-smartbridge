@@ -1,6 +1,6 @@
-# BookVerse
+# BookNest
 
-BookVerse is an original MERN bookstore built for the `book-store-project` folder. It keeps the full bookstore workflow but uses its own visual language, generated cover art, and a MongoDB-backed backend.
+BookNest is an original MERN bookstore built for the `book-store-project` folder. It keeps the full bookstore workflow but uses its own visual language, generated cover art, and a MongoDB-backed backend.
 
 ## What is included
 
@@ -22,44 +22,58 @@ To properly run this project, make sure you have the following software installe
 
 ## How to Run the Project Locally
 
-You will need to open **two separate terminal windows** (one for the backend, one for the frontend).
+Since the project is set up using npm workspaces, you can manage and run both the frontend and backend from the root directory.
 
-### 1. Start the Backend
+### Quick Start (Recommended)
 
-1. Open a new terminal.
-2. Navigate to the `backend` folder:
+1. **Install dependencies** for both frontend and backend in one go:
+   ```bash
+   npm install
+   ```
+2. **Start the Backend server** (in one terminal window):
+   ```bash
+   npm run dev:backend
+   ```
+   *(Runs on `http://localhost:4000`)*
+3. **Start the Frontend app** (in a second terminal window):
+   ```bash
+   npm run dev:frontend
+   ```
+   *(Runs on `http://localhost:5173` or `http://localhost:5174`)*
+
+---
+
+### Alternative Method (Folder-by-Folder)
+
+If you prefer to run them separately by navigating to each directory:
+
+#### 1. Start the Backend
+1. Navigate to the `backend` folder:
    ```bash
    cd backend
    ```
-3. Install the dependencies (you only need to do this once):
+2. Install dependencies & start:
    ```bash
    npm install
-   ```
-4. Start the backend server:
-   ```bash
    npm run dev
    ```
-*(The backend will run on `http://localhost:4000` and automatically connect to your local MongoDB server)*
 
-### 2. Start the Frontend
-
-1. Open a **second**, separate terminal.
-2. Navigate to the `frontend` folder:
+#### 2. Start the Frontend
+1. Navigate to the `frontend` folder:
    ```bash
    cd frontend
    ```
-3. Install the dependencies (you only need to do this once):
+2. Install dependencies & start:
    ```bash
    npm install
-   ```
-4. Start the React app:
-   ```bash
    npm run dev
    ```
-*(The frontend will usually run on `http://localhost:5173` or `http://localhost:5174`. Open this link in your browser to view the app!)*
 
 ## Notes
 
 - **Stopping a Server**: If a server is already running and you need to stop it (for instance, if you get an `EADDRINUSE` error), click on the terminal window where it's running and press `Ctrl + C`. This safely kills the process.
 - **Seeded Data**: Demo accounts and books are seeded automatically in MongoDB when you start the backend for the first time on a fresh database.
-- **MongoDB Connection**: By default, the app looks for MongoDB at `mongodb://127.0.0.1:27017/BookVerse`. You can override this by creating a `.env` file in the backend folder.
+  - **Admin**: `admin@bookbound.local` (Password: `Admin@123` or `password123` if reseeded)
+  - **Seller**: `seller1@bookbound.local` (Password: `Seller@123` or `password123` if reseeded)
+  - **User/Reader**: `user@bookbound.local` (Password: `User@123` or `password123` if reseeded)
+- **MongoDB Connection**: By default, the app looks for MongoDB at `mongodb://127.0.0.1:27017/BookBound`. You can override this by creating a `.env` file in the `backend` folder and setting `MONGO_URI=mongodb://127.0.0.1:27017/BookNest`.
