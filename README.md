@@ -1,3 +1,5 @@
+Demo link:-  "https://drive.google.com/file/d/1amQpJ9KHs0I-_YPj1Twu5x77iSkMs4SS/view?usp=sharing"
+
 # Book Store (BookNest) - MERN Stack Project
 
 BookNest is a full-stack online marketplace built using the MERN (MongoDB, Express, React, Node) stack. The platform allows users to browse and purchase books, enables sellers to manage their catalogs and orders, and provides administrators with control panels to manage accounts, listings, and approvals.
@@ -6,30 +8,30 @@ BookNest is a full-stack online marketplace built using the MERN (MongoDB, Expre
 All development stages and milestones are documented in the Phase Wise Documents folder. Below are links to the individual deliverables for each phase:
 
 💡 Phase 1: Brainstorming & Idea Generation
-- [Brainstorming - Idea Generation.pdf](file:///Phase%20Wise%20Documents/Phase%201%20-%20Brainstorming%20&%20Idea%20Generation/Brainstorming%20-%20Idea%20Generation.pdf)
-- [Define Problem Statements.pdf](file:///Phase%20Wise%20Documents/Phase%201%20-%20Brainstorming%20&%20Idea%20Generation/Define%20Problem%20Statements.pdf)
-- [Empathy Map Canvas.pdf](file:///Phase%20Wise%20Documents/Phase%201%20-%20Brainstorming%20&%20Idea%20Generation/Empathy%20Map%20Canvas.pdf)
+- [Brainstorming - Idea Generation.pdf](Phase%20Wise%20Documents/Phase%201%20-%20Brainstorming%20&%20Idea%20Generation/Brainstorming%20-%20Idea%20Generation.pdf)
+- [Define Problem Statements.pdf](Phase%20Wise%20Documents/Phase%201%20-%20Brainstorming%20&%20Idea%20Generation/Define%20Problem%20Statements.pdf)
+- [Empathy Map Canvas.pdf](Phase%20Wise%20Documents/Phase%201%20-%20Brainstorming%20&%20Idea%20Generation/Empathy%20Map%20Canvas.pdf)
 
 📋 Phase 2: Requirement Analysis
-- [Data Flow Diagrams and User Stories.pdf](file:///Phase%20Wise%20Documents/Phase%202%20-%20Requirement%20Analysis/Data%20Flow%20Diagrams%20and%20User%20Stories.pdf)
-- [Solution Requirements.pdf](file:///Phase%20Wise%20Documents/Phase%202%20-%20Requirement%20Analysis/Solution%20Requirements.pdf)
-- [Technology Stack.pdf](file:///Phase%20Wise%20Documents/Phase%202%20-%20Requirement%20Analysis/Technology%20Stack.pdf)
+- [Data Flow Diagrams and User Stories.pdf](Phase%20Wise%20Documents/Phase%202%20-%20Requirement%20Analysis/Data%20Flow%20Diagrams%20and%20User%20Stories.pdf)
+- [Solution Requirements.pdf](Phase%20Wise%20Documents/Phase%202%20-%20Requirement%20Analysis/Solution%20Requirements.pdf)
+- [Technology Stack.pdf](Phase%20Wise%20Documents/Phase%202%20-%20Requirement%20Analysis/Technology%20Stack.pdf)
 
 🗺️ Phase 3: Project Planning
-- [Project Planning.pdf](file:///Phase%20Wise%20Documents/Phase%203%20-%20Project%20Planning/Project%20Planning.pdf)
+- [Project Planning.pdf](Phase%20Wise%20Documents/Phase%203%20-%20Project%20Planning/Project%20Planning.pdf)
 
 🎨 Phase 4: Project Design
-- [Problem - Solution Fit v1.pdf](file:///Phase%20Wise%20Documents/Phase%204%20-%20Project%20Design/Problem%20-%20Solution%20Fit%20v1.pdf)
-- [Proposed Solution.pdf](file:///Phase%20Wise%20Documents/Phase%204%20-%20Project%20Design/Proposed%20Solution.pdf)
-- [Solution Architecture.pdf](file:///Phase%20Wise%20Documents/Phase%204%20-%20Project%20Design/Solution%20Architecture.pdf)
+- [Problem - Solution Fit v1.pdf](Phase%20Wise%20Documents/Phase%204%20-%20Project%20Design/Problem%20-%20Solution%20Fit%20v1.pdf)
+- [Proposed Solution.pdf](Phase%20Wise%20Documents/Phase%204%20-%20Project%20Design/Proposed%20Solution.pdf)
+- [Solution Architecture.pdf](Phase%20Wise%20Documents/Phase%204%20-%20Project%20Design/Solution%20Architecture.pdf)
 
 ⚙️ Phase 5: Project Development & Testing
-- [User Acceptance Testing FSD.pdf](file:///Phase%20Wise%20Documents/Phase%205%20-%20Project%20Development%20&%20Testing/User%20Acceptance%20Testing%20FSD.pdf)
+- [User Acceptance Testing FSD.pdf](Phase%20Wise%20Documents/Phase%205%20-%20Project%20Development%20&%20Testing/User%20Acceptance%20Testing%20FSD.pdf)
 
 📄 Core Documentation
-- **Full FSD Project Documentation (PDF)**: [BookStore_Documentation.pdf](file:///Phase%20Wise%20Documents/BookStore_Documentation.pdf) (The final structured documentation compiling all schemas, structures, routes, and testing plans)
-- **Product Requirement Document (PRD)**: [PRD.txt](file:///Phase%20Wise%20Documents/PRD.txt)
-- **Demo Walkthrough Video**: [Demo.mp4](file:///Phase%20Wise%20Documents/Demo.mp4)
+- **Full FSD Project Documentation (PDF)**: [BookStore_Documentation.pdf](Phase%20Wise%20Documents/BookStore_Documentation.pdf) (The final structured documentation compiling all schemas, structures, routes, and testing plans)
+- **Product Requirement Document (PRD)**: [PRD.txt](Phase%20Wise%20Documents/PRD.txt)
+- **Demo Walkthrough Video**: [Demo.mp4](Phase%20Wise%20Documents/Demo.mp4)
 
 🛠️ Project Structure
 book-store-project/
