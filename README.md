@@ -1,5 +1,4 @@
-Demo link:- "About
-demo link:- https://drive.google.com/file/d/1amQpJ9KHs0I-_YPj1Twu5x77iSkMs4SS/view?usp=sharing"
+Demo link:-  "https://drive.google.com/file/d/1amQpJ9KHs0I-_YPj1Twu5x77iSkMs4SS/view?usp=sharing"
 
 # Book Store (BookNest) - MERN Stack Project
 
