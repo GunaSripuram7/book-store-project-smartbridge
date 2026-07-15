@@ -1,3 +1,6 @@
+Demo link:- "About
+demo link:- https://drive.google.com/file/d/1amQpJ9KHs0I-_YPj1Twu5x77iSkMs4SS/view?usp=sharing"
+
 # Book Store (BookNest) - MERN Stack Project
 
 BookNest is a full-stack online marketplace built using the MERN (MongoDB, Express, React, Node) stack. The platform allows users to browse and purchase books, enables sellers to manage their catalogs and orders, and provides administrators with control panels to manage accounts, listings, and approvals.
